@@ -1,0 +1,82 @@
+.banner{
+   background-image:url('img/banner.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size:cover;
+   text-align: center;
+   border-radius:20px;
+   display:block;
+   min-width:100%;
+   text-shadow:black 0px 0px 10px;
+}
+#logo{
+    width: auto;
+    max-width: 15%;
+}
+body{
+    font-family: "Arial", Times, serif;
+}
+.bannertext{
+    font-size: 2.3em;
+    color: white;
+    text-shadow: black 0px 1px 10px;
+}
+#message{
+    color:white;
+	background-image:url('img/banner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    font-weight:bold;
+    font-size:1.2em;
+    background-color:#D6ED11;
+    border-radius:20px;
+    padding:20px;
+    display:block;
+	text-shadow:black 0px 0px 10px;
+	text-align:center;
+}
+#student{
+	background-image:url('img/banner.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size:cover;
+	border:white solid;
+	border-radius:20px;
+	position:relative;
+	
+}
+#teacher{
+	background-image:url('img/banner.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size:cover;
+	border:white solid;
+	border-radius:20px;
+}
+#admin{
+	background-image:url('img/banner.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size:cover;
+	border:white solid;
+	border-radius:20px;
+}
+#select{
+	text-align:center;
+}
+.panel{
+	color: white;
+	text-shadow:black 0px 0px 10px;
+}
+img{
+	transition:0.5s;
+}
+img:hover{
+	transform: scale(1.2, 1.2);
+}
