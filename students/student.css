@@ -1,9 +1,20 @@
-#banner{
+#banner,.active,#regi{
 	text-align:center;
 	color:white;
 	text-shadow: 3px 3px 10px black;
 	background-image:url('img/banner.jpg');
-   background-attachment: fixed;
+   	background-attachment: fixed;
+}
+.active{
+	text-align:left;
+	font-size:2em;
+}
+#regi{
+	font-size:1em;
+	text-align:left;
+}
+#regi .alert-danger{
+	text-shadow:none;
 }
 .logo{
 	width:auto;

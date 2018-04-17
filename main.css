@@ -47,16 +47,9 @@ body{
 	border:white solid;
 	border-radius:20px;
 	position:relative;
+	min-height: 60vh;
+
 	
-}
-#teacher{
-	background-image:url('img/banner.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size:cover;
-	border:white solid;
-	border-radius:20px;
 }
 #admin{
 	background-image:url('img/banner.jpg');
@@ -66,11 +59,14 @@ body{
 	background-size:cover;
 	border:white solid;
 	border-radius:20px;
+	position: relative;
+	min-height: 60vh;
 }
 #select{
 	text-align:center;
 }
 .panel{
+	min-height:fit-content ;
 	color: white;
 	text-shadow:black 0px 0px 10px;
 }
@@ -79,4 +75,8 @@ img{
 }
 img:hover{
 	transform: scale(1.2, 1.2);
+}
+#std_img,#admin_img{
+	z-index:1;
+	position:absolute;
 }

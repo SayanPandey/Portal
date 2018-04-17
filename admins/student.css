@@ -1,0 +1,26 @@
+#banner,.active,#regi{
+	text-align:center;
+	color:white;
+	text-shadow: 3px 3px 10px black;
+	background-image:url('img/banner.jpg');
+   	background-attachment: fixed;
+}
+.logo{
+	width:auto;
+	height:auto;
+	max-height:200px;
+	max-width:200px;
+}
+.bg{	
+	min-height: 50vh;
+	color:white;
+	text-shadow: 3px 3px 10px black;
+	background-image:url('img/banner.jpg');
+   	background-attachment: fixed;
+}
+.fm{
+	margin-top: 6%;
+	background:rgba(0,0,0,0.6);
+	padding:50px;
+	border-radius:20px;
+}

@@ -69,7 +69,7 @@
 		</div>
 		
 		<!--form toggle-->
-		<div class="container-fluid" id="departtoggle" style="display:none;">
+		<div id="departtoggle" style="display:none;">
 			<nav id="nav" class="alert alert-success">
 				<a class="navbar-brand">To Show / Hide the department list :</a>
 			   <button  href="#list" type="button" class="btn btn-success btn-lg" id="departbutton">Click here</button>
@@ -84,7 +84,6 @@
 		<h1>LOGIN: <span class="depart"></span></h1>
 		<h3>  Welcome click on your department from the list  and then use the login form below:</h3>
 		</div>
-		
 		<form id="form1" method="POST" action="login">
 		  <div class="form-group">
 			<label>Department</label>

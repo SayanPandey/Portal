@@ -1,4 +1,4 @@
 $(document).ready(function(){
-    $(".panel, #std_img, #admin_img, #teach_img").hide();
-    $(".panel, #std_img, #admin_img, #teach_img").slideDown();
+    $(".panel").css({'display':'none'}).slideDown("slow"); 
+    $('#students').tooltip();    
 });

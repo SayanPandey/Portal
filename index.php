@@ -11,7 +11,7 @@
 	</head>
     <body class="container-fluid"> 
         <div class="banner container-fluid">
-            <img id="logo" src="students/img/logo.png">
+            <a href="http://www.nitdgp.ac.in/"><img id="logo" src="students/img/logo.png"></a>
             <h3 class="bannertext">National Institute of Technology  DURGAPUR, West Bengal</h3>
 			<h3 class="bannertext">राष्ट्रीय प्रौद्योगिकी संस्थान दुर्गापुर, पश्चिम बंगाल</h3>
 			<br>
@@ -21,17 +21,13 @@
         <br>
 		<div class="container-fluid">
         <div id="select" class="row">
-            <div id="student" class="col-md-4">
+            <div id="student" class="col-md-6">
                     <h1 class="panel">Students' Portal</h1><a target="_blank" href="students">
-                    <img id="std_img" src="img/student.png" style="float:right"></a>
+                    <img id="std_img" src="img/student.png"></a>
             </div>
-			<div id="teacher" class="col-md-4">
-                    <h1 class="panel">Teachers' Portal</h1><a target="_blank" href="teachers">
-                    <img id="teach_img" src="img/teacher.png" style="float:right"></a>
-            </div>
-            <div id="admin" class="col-md-4">
+            <div id="admin" class="col-md-6">
 					<h1 class="panel">Administrators' Portal</h1><a target="_blank" href="admins">
-                    <img id ="admin_img" src="img/administrator.png" style="float:right"></a>
+                    <img id ="admin_img" src="img/administrator.png"></a>
             </div> 
         </div>
 		</div>
