@@ -1,6 +1,6 @@
 <?php
 
-	//*Sayan Pandey* 15/IT/21*
+	//Sayan Pandey 15/IT/21
 	$department=isset($_POST["department"])?htmlspecialchars($_POST["department"]):NULL;
 	$regno=isset($_POST["regno"])?htmlspecialchars($_POST["regno"]):NULL;
 	$rollno=isset($_POST["rollno"])?htmlspecialchars($_POST["rollno"]):NULL;
@@ -32,13 +32,6 @@
 		"HOME"=>"HOME",
 		NULL=>NULL
 	);
-	
-	//Server credentials
-	$servername='localhost';
-	$username='root';
-	$password='';
-	$database='dep';
-	
 	//Breaching/Tampering error
 	// Function to get the client IP address
 	function get_client_ip() {
@@ -69,34 +62,17 @@
 	}
 	
 	//Connection
-		$conn=new mysqli($servername,$username,$password,$database);
-		if ($conn->connect_error) {
-			die("Fatal connection error!! PLEASE report to the IT department ->".$conn->connect_error());
-		}
+	require "connection.php";
 		
-	//Check the registration number and rollno
-		$check_status="select * from ".$table." where reg=? and rollno=?";
-		if($check = $conn->prepare($check_status)){ 
-		$check->bind_param("is",$regno,$rollno);
-		if(!$check->execute())
-			die("Error: ".$check->error);
-		$result=$check->get_result();
-			//Register the student now
-			if($result->num_rows){
-				$sql="update ".$table." set pass = ? where reg=?";
-				if($stmt = $conn->prepare($sql)){ 
-					$stmt->bind_param("si",$pass,$regno);
-					if(!$stmt->execute())
-						die("Error: ".$stmt->error);
-					echo "success";
-				}
-				else
-					die ("Sorry!! unable to register please try again later");
-			}
-			else
-				die("Sorry!! unable to register please recheck your inputs");
+	//Register the student now
+		$sql="Insert into ".$table." (pass,regno,rollno) values (?,?,?)";
+		if($stmt = $conn->prepare($sql)){ 
+			$stmt->bind_param("sis",$pass,$regno,$rollno);
+			if(!$stmt->execute())
+				die("Error: ".$stmt->error);
+			echo "success";
 		}
 		else
-			die ("Seems that the servers are having some trouble");
+			die ("Sorry!! unable to register please try again later");
 		$conn->close();
 ?>

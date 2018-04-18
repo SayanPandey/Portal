@@ -11,3 +11,27 @@
 	max-height:200px;
 	max-width:200px;
 }
+.btn-success,.btn-danger{
+	border:solid 2px rgba(0,0,0);
+}
+.hmm{
+	color:white;
+	background-attachment:fixed;
+	background-image:url('/Portal/students/img/it.jpg');
+	border:2px solid white;
+	text-shadow: 0px 0px 10px black;
+	border-radius: 10px;
+}
+.alert-danger,.text-muted,.drop_box1,.drop_box2,.drop_box3,.drop_box4,.drop_box5,.drop_box6,.drop_box7,.drop_box8,#home .alert-success,.alert-warning
+{
+	background: rgba(0,0,0,0.7);
+	color:red;
+	padding:10px;
+	border-radius: 5px;
+}
+.text-muted,#home .alert-success,.alert-warning{
+	color:white;
+}
+#home{
+	min-height:50vh;
+}

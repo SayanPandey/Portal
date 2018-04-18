@@ -17,6 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="student.css">
 	</head>
 	<body>
+	<br>
 	<!--Banner-->
 	<div class="container-fluid">
 	<div id="banner" class="jumbotron jumbotron-fluid ">
@@ -34,11 +35,11 @@
 			<form action="/action_page.php">
 				<div class="form-group">
 					<label for="email">Username:</label>
-					<input type="email" class="form-control" id="email">
+					<input type="text" class="form-control" id="username">
 				</div>
 				<div class="form-group">
 					<label for="pwd">Password:</label>
-					<input type="password" class="form-control" id="pwd">
+					<input type="password" class="form-control" id="password">
 				</div>
 				<button type="submit" class="btn btn-success btn-lg">Submit</button>
 			</form>

@@ -69,7 +69,7 @@ $(document).ready(function(){
 			if(response==="success"){
 				$("#regi").slideUp(function(){
 				$(this).find("h1").text("Successfully Registered");
-				$(this).removeClass("alert-info alert-danger").addClass("alert-success");
+				$(this).removeClass("alert-info alert-danger").addClass("alert-success").css({'background-image':'none','color':'green','text-shadow':'none'});
 				$('#message').html('Successfully Registered').removeClass("alert-danger").addClass("alert-success");
 				$("#form2").slideUp();
 				$("#form1").slideDown();
@@ -78,7 +78,7 @@ $(document).ready(function(){
 			else{
 				$("#regi").slideUp(function(){
 				$(this).find("h1").text(response);
-				$(this).addClass("alert-danger").removeClass("alert-success");
+				$(this).addClass("alert-danger").removeClass("alert-success").css({'background-image':'none','color':'red','text-shadow':'none'});
 				$('#message').html(response).addClass("alert alert-danger").removeClass("alert-success");
 				});
 			}
@@ -100,7 +100,7 @@ $(document).ready(function(){
 
 	//Login errorThrown
 	if(error!=0){
-		$("#regi").hide().removeClass("alert-success alert-info alert-danger").addClass("alert-warning");
+		$("#regi").hide().removeClass("alert-success alert-info alert-danger").addClass("alert-warning").css({'background-image':'none','color':'red','text-shadow':'none'});
 		$("#regi").find("h1").html(error);
 		$("#regi").slideDown();
 	}

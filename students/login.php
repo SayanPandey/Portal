@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['error'];
+	$_SESSION['error']=NULL;
 	
 	//*Sayan Pandey* 15/IT/21*
 	$department=isset($_POST["department"])?htmlspecialchars($_POST["department"]):NULL;
@@ -35,12 +35,6 @@
 		NULL=>NULL
 	);
 	
-	//Server credentials
-	$servername='localhost';
-	$username='root';
-	$password='';
-	$database='dep';
-	
 	//Breaching/Tampering error
 	// Function to get the client IP address
 	function get_client_ip() {
@@ -61,46 +55,40 @@
 			$ipaddress = 'UNKNOWN';
 		return $ipaddress;
 	}
+
+	require "connection.php";
 	if(!array_key_exists($department,$dept)|| $pass==NULL){
 		$_SESSION['error'] = "Please do not tamper with the site: We can track you with your IP address:".get_client_ip();
-		header("Location:/students",true,303);
+		header("Location:/Portal/students",true,303);
 		die();
 	}
 	$table=$dept[$department];
 	if($table==="HOME" || $table===NULL){
 		$_SESSION['error']="Select Department !!";
-		header("Location:/students",true,303);
+		header("Location:/Portal/students",true,303);
 		die();
 	}
-	//Connection
-		$conn=new mysqli($servername,$username,$password,$database);
-		if ($conn->connect_error) {
-			$_SESSION['error']="Fatal connection error!! PLEASE report to the IT department ->".$conn->connect_error();
-			header("Location:/students",true,303);
-			die();
-		}
-	
 	//Check the registration number
-		$check_status="select * from ".$table." where reg=? and pass=?";
+		$check_status="select * from ".$table." where regno=? and pass=?";
 		if($check = $conn->prepare($check_status)){ 
 		$check->bind_param("is",$regno,$pass);
 		$check->execute();
 		$result=$check->get_result();
 			//Register the student now
 			if($result->num_rows){
-				$redirect="Location:/students/dept/".$table;
+				$redirect="Location:/Portal/students/dept/".$table;
 				header($redirect,true,303);
 				die();
 			}
 			else{
 				$_SESSION['error']="Sorry!! unable to login please recheck your inputs";
-				header("Location:/students",true,303);
+				header("Location:/Portal/students",true,303);
 				die();
 			}
 		}
 		else{
 			$_SESSION['error']="Seems that the servers are having some trouble";
-			header("Location:/students",true,303);
+			header("Location:/Portal/students",true,303);
 			die();
 		}
 		
