@@ -104,6 +104,16 @@ $(document).ready(function(){
 		$("#regi").find("h1").html(error);
 		$("#regi").slideDown();
 	}
+
+	//Stack menu when collapsed
+	$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
+		$('.nav-tabs').addClass('nav-stacked');
+	});
+
+	//Unstack menu when not collapsed
+	$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+		$('.nav-tabs').removeClass('nav-stacked');
+	});
 	
 });
 function getData(x){

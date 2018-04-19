@@ -1,15 +1,18 @@
-#banner,.active,#regi{
-	text-align:center;
+#banner,.list-group .active,#regi{
 	color:white;
 	text-shadow: 3px 3px 10px black;
 	background-image:url('img/banner.jpg');
-   	background-attachment: fixed;
+	background-attachment: fixed;
+}
+#banner{
+	text-align: center;
 }
 .logo{
 	width:auto;
 	height:auto;
 	max-height:200px;
 	max-width:200px;
+	float:left;
 }
 .bg{	
 	min-height: 50vh;
@@ -23,4 +26,24 @@
 	background:rgba(0,0,0,0.6);
 	padding:50px;
 	border-radius:20px;
+}
+#regi{
+	text-align:left;
+}
+a{
+	color:#288D07;
+}.navbar-header{
+	float:right;
+	position:relative;
+	bottom:8px;
+}
+.hmm,.hmm a{
+	background-image:url('img/banner.jpg');
+	background-attachment: fixed;
+	color:white;
+	text-shadow: 3px 3px 10px black;
+}
+.active a{
+    border-color: black !important;
+    background-color: #D8FFA0!important;
 }

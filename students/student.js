@@ -104,7 +104,6 @@ $(document).ready(function(){
 		$("#regi").find("h1").html(error);
 		$("#regi").slideDown();
 	}
-	
 });
 function getData(x){
 	$(".list-group").children().removeClass("active");

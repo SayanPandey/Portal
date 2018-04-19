@@ -38,7 +38,7 @@ body{
 	text-shadow:black 0px 0px 10px;
 	text-align:center;
 }
-#student{
+#student,#admin{
 	background-image:url('img/banner.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -50,17 +50,6 @@ body{
 	min-height: 60vh;
 
 	
-}
-#admin{
-	background-image:url('img/banner.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size:cover;
-	border:white solid;
-	border-radius:20px;
-	position: relative;
-	min-height: 60vh;
 }
 #select{
 	text-align:center;
@@ -79,4 +68,6 @@ img:hover{
 #std_img,#admin_img{
 	z-index:1;
 	position:absolute;
+	left:20%;
+	top:10%;
 }

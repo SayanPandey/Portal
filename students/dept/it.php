@@ -32,6 +32,7 @@
 	</div>
 	
 	<!--SEMESTER navbar-->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#home">HOME</a></li>
 		<li><a onclick="setTable(1,this)" data-toggle="tab" href="#s1">SEMESTER I</a></li>
@@ -50,7 +51,17 @@
 		  <span class="glyphicon glyphicon-log-out"></span> Log out
 		</a>
 		</div></li>
-	  </ul>
+		</ul>
+	</div>
+
+	<div class="navbar-header">
+	<button type="button" style="border:solid #14700A 3px;box-shadow:black 0 0 10px" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span style="color:black;"class="sr-only">Toggle navigation</span>
+		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
+		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
+		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
+	</button>
+	</div>
 	  
 	  <!--Semester-Tabs-->
 	   <div class="tab-content">
