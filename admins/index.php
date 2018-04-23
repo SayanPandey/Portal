@@ -14,7 +14,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="student.css">
+		<link rel="stylesheet" type="text/css" href="admin.css">
 	</head>
 	<body>
 	<br>
@@ -53,7 +53,7 @@
 	<script>
 		var error="<?php echo isset($_SESSION['error'])?$_SESSION['error']:0; ?>";
 	</script>
-	<script type="text/javascript" src="student.js"></script>
+	<script type="text/javascript" src="admin.js"></script>
 </html>
 <?php
 	session_unset();

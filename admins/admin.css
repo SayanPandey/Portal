@@ -3,8 +3,6 @@
 	text-shadow: 3px 3px 10px black;
 	background-image:url('img/banner.jpg');
 	background-attachment: fixed;
-}
-#banner{
 	text-align: center;
 }
 .logo{
@@ -12,7 +10,6 @@
 	height:auto;
 	max-height:200px;
 	max-width:200px;
-	float:left;
 }
 .bg{	
 	min-height: 50vh;
@@ -47,3 +44,31 @@ a{
     border-color: black !important;
     background-color: #D8FFA0!important;
 }
+#togcon{
+	align-content: center;
+	position: relative;
+}
+#tg_switch{
+	position: relative;
+	max-width:30vw;
+	min-height:23vh;
+	background-color: rgba(0,0,0,0.8);
+	border-radius:100px;
+	border:ridge #909497 10px;
+	-webkit-box-shadow: 9px 8px 19px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 9px 8px 19px 3px rgba(0,0,0,0.75);
+	box-shadow: 9px 8px 19px 3px rgba(0,0,0,0.75);
+}
+#tg_button{
+	position: absolute;
+	max-width:1vh;
+	min-height:1vh;
+	background-color: red;
+	border-radius:50%;
+	z-index:100;
+	border:ridge red 10vh;
+	-webkit-box-shadow: 0px 0px 51px 18px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 51px 18px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 51px 18px rgba(0,0,0,0.75);
+	top:0px;
+	}

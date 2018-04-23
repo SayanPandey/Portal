@@ -44,23 +44,27 @@
 		<li><a onclick="setTable(7,this)" data-toggle="tab" href="#s7">SEMESTER VII</a></li>
 		<li><a onclick="setTable(8,this)" data-toggle="tab" href="#s8">SEMESTER VIII</a></li>
 		<li style="float:right;"><div> 
-		<a href="#" class="btn btn-warning">
-		  <span class="glyphicon glyphicon-circle-arrow-left"></span> Student's portal
+		<a href="#" class="btn btn-success">
+		  <span class="glyphicon glyphicon-circle-arrow-left"></span> Back to Portal
 		</a>
-		<a href="#" class="btn btn-info">
+		<a href="#" class="btn btn-danger">
 		  <span class="glyphicon glyphicon-log-out"></span> Log out
 		</a>
-		</div></li>
+		</div><br></li>
 		</ul>
-	</div>
+		</div>
 
-	<div class="navbar-header">
-	<button type="button" style="border:solid #14700A 3px;box-shadow:black 0 0 10px" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	<!--SEMESTER navbar-->
+	<div class="container-fluid">
+	<div class="navbar-header hmm">
+		<h3 style="float:left">&nbsp;&nbsp;&nbsp;Select Semester Here :</h3>
+	<button type="button" style="border:solid #A200FF 3px;box-shadow:black 0 0 10px;" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 		<span style="color:black;"class="sr-only">Toggle navigation</span>
-		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
-		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
-		<span style="border:solid #14700A 2px;"class="icon-bar"></span>
+		<span style="border:solid #A200FF 2px;"class="icon-bar"></span>
+		<span style="border:solid #A200FF 2px;"class="icon-bar"></span>
+		<span style="border:solid #A200FF 2px;"class="icon-bar"></span>
 	</button>
+	</div>
 	</div>
 	  
 	  <!--Semester-Tabs-->

@@ -35,3 +35,7 @@
 #home{
 	min-height:50vh;
 }
+ul .active a{
+    border-color: black !important;
+    background-color: #FFF782!important;
+}

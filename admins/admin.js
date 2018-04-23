@@ -29,6 +29,7 @@ $(document).ready(function(){
 		$("#list").css({'position':'relative'});
 		$("#departtoggle").css({'display':'block'});
 		$("#list").css({'display':'none'});
+		$("#tg_switch").css({'min-width':'50vw'});
 		
 	}
 	window.addEventListener("resize", function(){
@@ -37,11 +38,13 @@ $(document).ready(function(){
 			$("#list").css({'position':'relative'});
 			$("#departtoggle").css({'display':'block'});
 			$("#list").css({'display':'none'});
+			$("#tg_switch").css({'min-width':'50vw'});
 		}
 		else{
 			$("#list").css({'position':'sticky'});
 			$("#departtoggle").css({'display':'none'});
 			$("#list").css({'display':'block'});
+			$("#tg_switch").css({'min-width':'30vw'});
 		}
 	});
 	$("#departbutton").click(function(){
@@ -114,7 +117,8 @@ $(document).ready(function(){
 	$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
 		$('.nav-tabs').removeClass('nav-stacked');
 	});
-	
+
+//Document.ready end	
 });
 function getData(x){
 	$(".list-group").children().removeClass("active");

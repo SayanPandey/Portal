@@ -2,6 +2,26 @@
 	*Sayan Pandey *15/IT/21*
 */
 $(document).ready(function(){
+	//My personal code for responsive webpage (Sayan Pandey 15/IT/21)
+	var w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+	if(w<=768){
+		$(".nav").addClass('nav-stacked');
+		
+	}
+	else{
+		$(".nav").removeClass('nav-stacked');
+	}
+	window.addEventListener("resize", function(){
+		var x=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+		if(x<=768){
+			$(".nav").addClass('nav-stacked');
+		}
+		else{
+			$(".nav").removeClass('nav-stacked');
+		}
+	});
+});
+$(document).ready(function(){
 	var count=1;
 	$( ".drop_box1,.drop_box2,.drop_box3, .drop_box4, .drop_box5, .drop_box6, .drop_box7, .drop_box8" ).sortable({
 		items: "> div"
@@ -14,15 +34,6 @@ $(document).ready(function(){
 			$(this).slideDown();
 		});
 		$("table").find("button").removeAttr("disabled","disabled");
-	});
-	//Stack menu when collapsed
-	$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
-		$('.nav-tabs').addClass('nav-stacked');
-	});
-
-	//Unstack menu when not collapsed
-	$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
-		$('.nav-tabs').removeClass('nav-stacked');
 	});
 });
 

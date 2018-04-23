@@ -69,7 +69,7 @@
 		if($stmt = $conn->prepare($sql)){ 
 			$stmt->bind_param("sis",$pass,$regno,$rollno);
 			if(!$stmt->execute())
-				die("Error: ".$stmt->error);
+				die("ALERT: ".$stmt->error);
 			echo "success";
 		}
 		else
