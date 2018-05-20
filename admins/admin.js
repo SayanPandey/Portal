@@ -1,6 +1,27 @@
 /*
 	*Sayan Pandey*15/IT/21*
 */
+function Check_season(){
+	$.post("Season.php",{
+		season:"1"
+	},
+		function(data,status){
+			if(data==1){
+				$("#tg_button").removeAttr('style').animate({
+					right:'0px',
+					borderColor:"#55FF00"
+				});
+				$("#sstatus").text("ON").css({"color":"#55FF00"});
+			}
+			else{
+				$("#tg_button").css({'right':'0px'}).animate({
+					left:'0px',
+					borderColor:"red"
+				});
+				$("#sstatus").text("OFF").css({"color":"red"});
+			}
+	});
+}
 $(document).ready(function(){
 	$("#toggle").click(function(){
 		$("#form1").slideToggle();
@@ -52,6 +73,7 @@ $(document).ready(function(){
 			$("#tg_switch").css({'min-width':'30vw'});
 		}
 	});	
+	Check_season();
 
 //Document.ready end	
 });
@@ -70,12 +92,14 @@ $("#tg_button").click(function(){
 				right:'0px',
 				borderColor:"#55FF00"
 			});
+			$("#sstatus").fadeOut().text("ON").css({"color":"#55FF00"}).fadeIn();
 		}
 		else{
 			$("#tg_button").css({'right':'0px'}).animate({
 				left:'0px',
 				borderColor:"red"
 			});
+			$("#sstatus").fadeOut().text("OFF").css({"color":"red"}).fadeIn();
 		}
 	});
 });

@@ -1,4 +1,5 @@
 <?php
+    session_start();        
     require 'connection.php';
     $sql = "SELECT Season from admins";
     $result = $conn->query($sql);
@@ -11,6 +12,11 @@
         // output data of each row
         while($row = $result->fetch_assoc()) {
             $season=$row['Season'];
+            //Below to get the season status at the begining.
+            if(isset($_POST["season"])){
+                echo $season;
+                die();
+            }
         }
         if($season==1){
             $sql = "Update admins set Season=0;";

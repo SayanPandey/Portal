@@ -112,9 +112,14 @@
 		</div>
 		
 		<div id="togcon" class="jumbotron jumbotron-fluid alert alert-info hmm" role="alert">
+		<h2 >Season Control</h2>
+		<br>
 		<div id="tg_switch">
 			<div id="tg_button">
 			</div>
+		</div>
+		<div id="season">
+		<h1 id="sstatus"></h1>
 		</div>	
 		</div>
 	</div>
