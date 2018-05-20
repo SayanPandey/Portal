@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if(!$_SESSION['loginadmin']){
+		header("Location:/Portal/admins/",true,303);
+		die();
+	}
 ?>
 <!DOCTYPE html>
 <!--Sayan Pandey 15/IT/21-->
@@ -14,6 +18,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="admin.css">
 	</head>
 	<body>
@@ -110,7 +115,7 @@
 		<div id="tg_switch">
 			<div id="tg_button">
 			</div>
-		</div>
+		</div>	
 		</div>
 	</div>
 	</body>
@@ -119,7 +124,3 @@
 	</script>
 	<script type="text/javascript" src="admin.js"></script>
 </html>
-<?php
-	session_unset();
-	session_destroy();
-?>

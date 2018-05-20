@@ -55,7 +55,7 @@
 		</div>
 
 	<!--SEMESTER navbar-->
-	<div class="container-fluid">
+	<div id="selectbar" class="container-fluid">
 	<div class="navbar-header hmm">
 		<h3 style="float:left">&nbsp;&nbsp;&nbsp;Select Semester Here :</h3>
 	<button type="button" style="border:solid #A200FF 3px;box-shadow:black 0 0 10px;" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -89,7 +89,7 @@
 					<div class="drop_box1 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -110,7 +110,7 @@
 					<div class="drop_box2 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -131,7 +131,7 @@
 					<div class="drop_box3 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -152,7 +152,7 @@
 					<div class="drop_box4 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -173,7 +173,7 @@
 					<div class="drop_box5 jumbotron alert-warning">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -194,7 +194,7 @@
 					<div class="drop_box6 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -215,7 +215,7 @@
 					<div class="drop_box7 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>
@@ -236,7 +236,7 @@
 					<div class="drop_box8 jumbotron alert-info">
 					</div>
 				<div class="alert-danger">
-				<p>WARNING: Once you Submit your response,no further alteration will be entertained</p>
+				<p>WARNING: Once your response is allocated no further alteration will be entertained for students without Season Pass</p>
 				</div><br>
 				<!--Manipulating-buttons-->
 					<a class="clear btn btn-lg btn-danger">Clear</a>

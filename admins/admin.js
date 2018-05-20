@@ -13,17 +13,22 @@ $(document).ready(function(){
 	$('#home').click(function(){
 		$('#forms').slideUp();
 	});
-	$("#p2,#cp2").on("keyup",function(){
-		if($("#p2").val()==$("#cp2").val()){
-			$("#message").text("Password Matched").removeClass("alert-danger").addClass("alert alert-success");
-			$('#reg').removeAttr("disabled");
-		}
-		else{
-			$('#message').html('Password Not Matching').addClass("alert alert-danger").removeClass("alert-success");
-			$('#reg').attr("disabled", "disabled");
-		}
+
+	$("#departbutton").click(function(){
+		$("#list").slideToggle();
 	});
-	//My personal code for responsive webpage (Sayan Pandey 15/IT/21)
+	
+	//Stack menu when collapsed
+	$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
+		$('.nav-tabs').addClass('nav-stacked');
+	});
+
+	//Unstack menu when not collapsed
+	$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+		$('.nav-tabs').removeClass('nav-stacked');
+	});
+
+//My personal code for responsive webpage (Sayan Pandey 15/IT/21)
 	var w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
 	if(w<=768){
 		$("#list").css({'position':'relative'});
@@ -46,77 +51,7 @@ $(document).ready(function(){
 			$("#list").css({'display':'block'});
 			$("#tg_switch").css({'min-width':'30vw'});
 		}
-	});
-	$("#departbutton").click(function(){
-		$("#list").slideToggle();
-	});
-	
-	//AJAX usage Sayan Pandey (15/IT/21)
-	var request;
-
-	$("#form2").submit(function(){
-		event.preventDefault();
-		if(request){        
-			request.abort();    
-		}
-		 var $form = $(this);
-		 var $inputs = $form.find("input, select, button, textarea");
-		 var $serializedData = $form.serialize();
-
-		 request = $.ajax({        
-			url: "reg.php",        
-			type: "post",        
-			data: $serializedData
-		});
-		request.done(function (response, textStatus, jqXHR){
-			if(response==="success"){
-				$("#regi").slideUp(function(){
-				$(this).find("h1").text("Successfully Registered");
-				$(this).removeClass("alert-info alert-danger").addClass("alert-success");
-				$('#message').html('Successfully Registered').removeClass("alert-danger").addClass("alert-success");
-				$("#form2").slideUp();
-				$("#form1").slideDown();
-				});
-			}
-			else{
-				$("#regi").slideUp(function(){
-				$(this).find("h1").text(response);
-				$(this).addClass("alert-danger").removeClass("alert-success");
-				$('#message').html(response).addClass("alert alert-danger").removeClass("alert-success");
-				});
-			}
-			$("#regi").slideDown();
-		});
-		request.fail(function (jqXHR, textStatus, errorThrown){
-			$('#message').html('Something went wrong!! please try again later.').addClass("alert-danger").removeClass("alert-success");
-		});
-		request.always(function () {
-			// Renew the inputs
-			$inputs.prop("disabled", false);
-			$inputs.val("");
-			(function(){
-				$("#department2").val($(".depart").first().text());
-			})();
-		});
-		return false;
-	});
-
-	//Login errorThrown
-	if(error!=0){
-		$("#regi").hide().removeClass("alert-success alert-info alert-danger").addClass("alert-warning");
-		$("#regi").find("h1").html(error);
-		$("#regi").slideDown();
-	}
-
-	//Stack menu when collapsed
-	$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
-		$('.nav-tabs').addClass('nav-stacked');
-	});
-
-	//Unstack menu when not collapsed
-	$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
-		$('.nav-tabs').removeClass('nav-stacked');
-	});
+	});	
 
 //Document.ready end	
 });
@@ -127,3 +62,20 @@ function getData(x){
 	$("#department").val($(x).text());
 	$("#department2").val($(x).text());
 }
+
+$("#tg_button").click(function(){
+	$.post("Season.php",function(data,status){
+		if(data==1){
+			$("#tg_button").removeAttr('style').animate({
+				right:'0px',
+				borderColor:"#55FF00"
+			});
+		}
+		else{
+			$("#tg_button").css({'right':'0px'}).animate({
+				left:'0px',
+				borderColor:"red"
+			});
+		}
+	});
+});

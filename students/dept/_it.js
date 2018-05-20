@@ -2,10 +2,12 @@
 	*Sayan Pandey *15/IT/21*
 */
 $(document).ready(function(){
+	$("#selectbar").hide();
 	//My personal code for responsive webpage (Sayan Pandey 15/IT/21)
 	var w = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
 	if(w<=768){
 		$(".nav").addClass('nav-stacked');
+		$("#selectbar").show();
 		
 	}
 	else{
@@ -15,9 +17,11 @@ $(document).ready(function(){
 		var x=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
 		if(x<=768){
 			$(".nav").addClass('nav-stacked');
+			$("#selectbar").show();
 		}
 		else{
 			$(".nav").removeClass('nav-stacked');
+			$("#selectbar").hide();
 		}
 	});
 });

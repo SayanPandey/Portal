@@ -19,8 +19,8 @@
 	<body>
 	<br>
 	<!--Banner-->
-	<div class="container-fluid">
-	<div id="banner" class="jumbotron jumbotron-fluid ">
+	<div class="container-fluid" >
+	<div id="banner" class="jumbotron jumbotron-fluid" >
 		<div class="container">
 		<img class="logo" src="img/logo.png">
 		<h1 class="display-3">Administrators' Portal</h1>
@@ -29,22 +29,23 @@
 	<!--form row-->
 	<div class="container-fluid">
 	<div class="row bg">
-	<div class="col-md-4 col-sm-4 col-xs-12"></div>
-	<div class="col-md-4 col-sm-4 col-xs-12 fm">
+	<div class="col-md-3 col-sm-3 col-xs-12"></div>
+	<div class="col-md-6 col-sm-6 col-xs-12 fm">
 		<!--Sayan Pandey 15/IT/21-->
-			<form action="/action_page.php">
+			<form action="/Portal/admins/login.php" method="POST">
 				<div class="form-group">
 					<label for="email">Username:</label>
-					<input type="text" class="form-control" id="username">
+					<input type="text" class="form-control" id="username" name="username">
 				</div>
 				<div class="form-group">
 					<label for="pwd">Password:</label>
-					<input type="password" class="form-control" id="password">
+					<input type="password" class="form-control" id="password" name="pass">
 				</div>
+				<h5 class="alert alert-danger" id="errormsg" style="text-shadow:none;display:none"></h5>
 				<button type="submit" class="btn btn-success btn-lg">Submit</button>
-			</form>
+			</form> 
 	</div>
-		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-3 col-sm-3 col-xs-12"></div>
 	</div>
 	</div>
 	</div>
@@ -53,7 +54,13 @@
 	<script>
 		var error="<?php echo isset($_SESSION['error'])?$_SESSION['error']:0; ?>";
 	</script>
-	<script type="text/javascript" src="admin.js"></script>
+	<script>
+		$(document).ready(function(){
+				if(error!=0){
+					$("#errormsg").text(error).show();
+				}
+	});
+	</script>
 </html>
 <?php
 	session_unset();
